@@ -1,0 +1,8 @@
+export const ORIGINAL_NETFLIX = '/discover/tv?with_network=213&language=pt-br'
+export const RECOMENDADO_VOCE = '/trending/all/week?language=pt-br'
+export const EM_ALTA = '/movie/top_rated?language=pt-br'
+export const ACAO = '/discover/movie?with_genres=28&language=pt-br'
+export const COMEDIA = '/discover/movie?with_genres=35&language=pt-br'
+export const TERROR = '/discover/movie?with_genres=27&language=pt-br'
+export const ROMANCE = '/discover/movie?with_genres=10749&language=pt-br'
+export const DOCUMENTARIO = '/discover/movie?with_genres=99&language=pt-br'

@@ -11,10 +11,6 @@ import {ORIGINAL_NETFLIX,
 
 import tmdb, {getHomeList} from '../../services/tmdb'
 
-function getApi() {
-  return tmdb.getHomeList();
-}
-
 function* fetchMovie() {
   try {
     const [original, recomendado, alta,acao,comedia,terror,romance,documentario] = yield all([

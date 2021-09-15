@@ -14,9 +14,11 @@ import {Movies,
 
 export default Dashboard = ({title, items,count}) => {  
     //const contador = useSelector(state => state.count) 
-    console.log("recebi", items)
-    function sobreFilme(overview){    
-       console.log(overview)
+    //console.log("recebi", items)
+    
+    function sobreFilme(overview){ 
+        
+       console.warn(overview)
     }
     return (
         <Movies>      
@@ -29,8 +31,5 @@ export default Dashboard = ({title, items,count}) => {
                 ))}
             </ScrollMovies>
         </Movies>
-            
-        
-       
     );
 }

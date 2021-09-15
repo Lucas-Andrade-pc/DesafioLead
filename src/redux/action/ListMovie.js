@@ -6,3 +6,11 @@ export function getMovie(){
         
     }
 }
+
+export function getSearchMovie(){
+    return {
+        type: type.GET_SEARCH_REQUEST
+        
+    }
+}
+

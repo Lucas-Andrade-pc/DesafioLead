@@ -2,14 +2,21 @@ const API_KEY = '4c56117fc51c27d062fc540fc8f21c7e';
 const API_BASE = 'https://api.themoviedb.org/3';
  
 const basciFetch = async(endpoint) =>{
-    const req = await fetch(`${API_BASE}${endpoint}`, {headers:{ 'Accept':'application/json', 'Content-Type':'application/json'}})
-    const json = await req.json();
-    return json;
+    const req = await fetch(`${API_BASE}${endpoint}`, 
+    {headers:{ 'Accept':'application/json', 'Content-Type':'application/json'}}).then(res=> res.json())
+    .then(data=> data)
+    return req
 }
-const bf = async(name) =>{
-    const req = await fetch(`${API_BASE}/search/movie?api_key=${API_KEY}language=pt-br&query=${name}&page=1&include_adult=false`)
-    const json = await req.json();
-    return json;
+export function searchMovies(name) {
+    try{
+        const req = fetch(`${API_BASE}/search/movie?api_key=${API_KEY}language=pt-br&query=${name}&page=1&include_adult=false`,
+        {headers:{ 'Accept':'application/json', 'Content-Type':'application/json'}})
+        .then(res=> res.json())
+        .then(data=> data)
+        return req
+    } catch(error){
+        console.log(err)
+    }
 }
 export function getHomeList(endpoint){
     try{
@@ -62,19 +69,4 @@ export default {
             // }
          ]
      },
-//     getSearch: async() =>{
-//         return [
-//             {
-//                 items: await bf(name)
-//             }
-//         ]
-//     }
-}
-
-export const search = async(name) =>{
-    console.log(name)
-    console.log('RETORNEI ISSO ')
-    return [
-        {items: await bf(name)} 
-    ];
 }

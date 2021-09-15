@@ -1,11 +1,11 @@
-export const up = () =>{
+export function getUp(){
     return {
-        type:'UP',
+        type: 'UP'
     }
 }
 
-export const down = () =>{
+export function getDown(){
     return {
-        type:'DOWN',
+        type: 'DOWN'
     }
 }

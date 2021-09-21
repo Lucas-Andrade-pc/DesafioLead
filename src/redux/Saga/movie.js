@@ -23,7 +23,7 @@ function* fetchMovie() {
       call(getHomeList, ROMANCE),
       call(getHomeList, DOCUMENTARIO)])
     //console.log(movies)
-    yield put({ type: 'GET_MOVIES' , movies: [ 
+    yield put({ type: type.GET_MOVIES , movies: [ 
       original.results, 
       recomendado.results, 
       alta.results,
